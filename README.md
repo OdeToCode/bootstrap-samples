@@ -1,4 +1,2 @@
 bootstrap-grid-sample
-=====================
-
-A sample to experiment with grids, fluid grids, and responsive layout
+=====================Some HTML pages to play with Bootstrap
