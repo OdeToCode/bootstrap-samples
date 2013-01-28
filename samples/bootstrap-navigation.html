@@ -1,0 +1,64 @@
+﻿
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Navigation</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.7.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="span3">
+                <h2>Tabs & Pills</h2>
+
+                <ul class="nav nav-list">
+                    <li class="nav-header">Places to go</li>
+                    <li><a href="#">Home</a></li>
+                    <li class="active"><a href="#">Contact</a></li>
+                    <li><a href="#">Sales</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">See more sites!
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="http://pluralsight.com">Pluralsight</a></li>
+                            <li><a tabindex="-1" href="http://amazon.com">Amazon</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="span9">
+                <h2>Tabbable</h2>
+                <div class="tabbable tabs-below">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#tab1" data-toggle="tab">Section 1</a></li>
+                        <li>
+                            <a href="#tab2" data-toggle="tab">Section 2</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab1">
+                            <p>Twitter Bootstrap is fun!</p>
+                        </div>
+                        <div class="tab-pane" id="tab2">
+                            <p>Pluralsight is fun!</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Other Components</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.7.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <a class="brand" href="/">The Sample Site</a>
+
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="/Articles/List">Articles</a></li>
+                    <li><a href="/blogs/all">Blog</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">See more sites!
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="http://pluralsight.com">Pluralsight</a></li>
+                            <li><a tabindex="-1" href="http://amazon.com">Amazon</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-search pull-right input-append">
+                    <input class="span2" id="appendedInputButtons" type="search">
+                    <button class="btn" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="span10">
+
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a> <span class="divider">/</span></li>
+                    <li><a href="#">Articles</a> <span class="divider">/</span></li>
+                    <li class="active">Life with XAML</li>
+                </ul>
+
+                <div class="hero-unit">
+                    <h1>Use HTML!</h1>
+                    <p>It's better than XML!</p>
+                    <p>
+                        <a class="btn btn-primary btn-large">Learn more</a>
+                    </p>
+                </div>
+
+                <h1>Life with XAML</h1>
+                <div class="muted">
+                    Saturday, February 04, 2006
+                </div>
+
+                <article>
+                    <p>British mathematician John Conway invented the “Game of Life” in 1970. The rules of the game are simple, but the results of the game can be surprising. This combination made Conway and his creation famous, and stirred the debate over the ability of machines to simulate life. Although the “Game of Life” didn’t start as a computer game, programmers have written versions of the game in nearly every programming language and for nearly every platform. In this article we will implement the “Game of Life” for the Windows Presentation Foundation (WPF). </p>
+                    <h3>Rules of Life </h3>
+                    <div><span class="label label-important">Follow the rules!</span></div>
+                    <p>
+                        The game of life plays out on a grid of cells. Each cell can be “alive” or “dead”. As time moves on, a dead cell can come to life, while a living cell can die. The rules for determining the state of a cell for the next time slice are the following: 
+                    </p>
+                    <ol>
+                        <li>A cell that is alive stays alive if two <i>or</i> three of the neighboring cells are alive.</li>
+                        <li>A cell that is dead comes alive if three of the neighboring cells are alive.</li>
+                    </ol>
+                    <p>All other cells either remain dead, or die (from loneliness if there are not enough living neighbors, or overcrowding if there are too many living neighbors). When you visualize the game of life, amazing patterns can emerge. There are “gliders”, “oscillators”, and other chaotic and beautiful designs. People say they can see the rise and fall of ancient Rome played out on a computer screen. You can find many references to the game on the Internet and read about the impact of the game on mathematics and computing. For now, however, let’s try to put together a simple implementation for WPF. </p>
+
+
+                    <h3>Pictures of Life</h3>
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="http://home.adelphi.edu/~stemkoski/mathematrix/0life.jpg">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">In Black and White</h4>
+                            <div class="media">
+                                This game uses black circles in a white grid. 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="https://lh3.ggpht.com/W29C-I-82oU4i8OFTw-xjvkJrU78AwirkJVr1QbKxKHOyqUHxGjX7Yt5XJH6mzp41DBl=w124">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Square</h4>
+                            <div class="media">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="http://upload.wikimedia.org/wikipedia/commons/9/9c/Conways_game_of_life_canoe.png" />
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">A Bit Of Color</h4>
+                                    <div class="media">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h3>Building a UI with Angled Brackets</h3>
+
+                    <div class="alert alert-success">
+                        <button class="close" data-dismiss="alert">&times;</button>
+                        <strong>Wow!</strong> You made it this far!
+                    </div>
+
+                    <p>Windows Presentation Foundation is one piece of the new WinFX framework. The goal of WPF is to provide a platform for building software with an enhanced user experience. WPF includes all of the user interface pieces we need to build a better presentation layer, including support for vector graphics, rich media, high-quality typography, and animations. Underneath the managed code exterior, WPF interfaces with Direct3D to take full advantage of specialized graphics hardware on a machine. </p>
+                    <p>WPF is not just about UI widgets and anti-aliasing, however. WPF understands a declarative markup language called XAML. XAML is short for eXtensible Application Markup Language, and is pronounced “Zammel”. We can use XAML to specify a user interface in a declarative fashion. XAML files are valid XML files, so not only can humans read and write XAML, but software tools and utilities can easily create, transform, and parse XAML. XAML will enable artists and their artsy tools to work closely with developers and their nerdy tools (or at least there should be less blood shed than in the past). </p>
+                    <p>Declaratively building a UI with angled brackets is nothing new in the world of .NET. ASP.NET developers have been building UIs for years like this: </p>
+                    <p>
+                    </p>
+
+
+
+
+                    <div style="BORDER-RIGHT: black 1pt solid; BORDER-TOP: black 1pt solid; FONT-SIZE: 8pt; BORDER-LEFT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; FONT-FAMILY: monospace; BACKGROUND-COLOR: #d3d3bd">
+                        <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">asp</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">Panel</span><span style="COLOR: black"> </span><span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span><span style="COLOR: black"> </span><span style="COLOR: red">ID</span><span style="COLOR: blue">="Panel1"&gt;<br>
+                        </span><span style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">asp</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">Label</span><span style="COLOR: black"> </span><span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span><span style="COLOR: black"> </span><span style="COLOR: red">ID</span><span style="COLOR: blue">="Label1"</span><span style="COLOR: black"> </span><span style="COLOR: red">Text</span><span style="COLOR: blue">="Name: "/&gt;<br>
+                        </span><span style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">asp</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TextBox</span><span style="COLOR: black"> </span><span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span><span style="COLOR: black"> </span><span style="COLOR: red">ID</span><span style="COLOR: blue">="TextBox1"</span><span style="COLOR: black"> </span><span style="COLOR: blue">/&gt;<br>
+                            &lt;/</span><span style="COLOR: maroon">asp</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">Panel</span><span style="COLOR: blue">&gt;<br>
+                            </span>
+                    </div>
+                    <p></p>
+                    <p>The ASP.NET runtime will parse the above markup and generate code to create Label, TextBox, and Panel objects, set the properties of those objects, and add the objects into a control tree. You can look at the markup as a textual representation of objects, their properties, and their relationship in a hierarchy. A tool will turn this textual representation into code, and the code, when compiled and executed, will carry out the necessary instructions to build the hierarchy of objects with their properties set. Think of XAML in a similar fashion. </p>
+                    <p>A simple user interface for the game of life might have Stop and Start buttons at the bottom of a window, and use the rest of the window for visualizing the game. Describing the interface in XAML would look like the following: </p>
+                    <p>
+                    </p>
+                    <div style="BORDER-RIGHT: black 1pt solid; BORDER-TOP: black 1pt solid; FONT-SIZE: 8pt; BORDER-LEFT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; FONT-FAMILY: monospace; BACKGROUND-COLOR: #d3d3bd">
+                        <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Window</span><span style="COLOR: blue"> </span><span style="COLOR: red">x:Class</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">fxLife.FxLifeWindow</span><span style="COLOR: black">"<br>
+                        </span><span style="COLOR: blue">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: red">xmlns</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">http://schemas.microsoft.com/winfx/avalon/2005</span><span style="COLOR: black">"<br>
+                        </span><span style="COLOR: blue">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: red">xmlns:x</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">http://schemas.microsoft.com/winfx/xaml/2005</span><span style="COLOR: black">"<br>
+                        </span><span style="COLOR: blue">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: red">Title</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">Life</span><span style="COLOR: black">"</span><span style="COLOR: blue"> </span><span style="COLOR: red">Background</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">PapayaWhip</span><span style="COLOR: black">"</span><span style="COLOR: blue">
+                            <br>
+                            &nbsp;&nbsp;&nbsp;</span><span style="COLOR: red">Height</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">400</span><span style="COLOR: black">"</span><span style="COLOR: blue"> </span><span style="COLOR: red">Width</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">400</span><span style="COLOR: black">"</span><span style="COLOR: blue">&gt;<br>
+                                &nbsp;&nbsp;&nbsp;<br>
+                                &nbsp;&nbsp;&nbsp;&lt;</span><span style="COLOR: maroon">DockPanel</span><span style="COLOR: blue">&gt;<br>
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="COLOR: maroon">StackPanel</span><span style="COLOR: blue"> </span><span style="COLOR: red">DockPanel.Dock</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">Bottom</span><span style="COLOR: black">"</span><span style="COLOR: blue">
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: red">Orientation</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">Horizontal</span><span style="COLOR: black">"</span><span style="COLOR: blue">
+                                            <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: red">HorizontalAlignment</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">Center</span><span style="COLOR: black">"</span><span style="COLOR: blue"> &gt;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="COLOR: maroon">Button</span><span style="COLOR: blue"> </span><span style="COLOR: red">x:Name</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">startButton</span><span style="COLOR: black">"</span><span style="COLOR: blue"> </span><span style="COLOR: red">Margin</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">5</span><span style="COLOR: black">"</span><span style="COLOR: blue">&gt;</span><span style="COLOR: black">Start</span><span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Button</span><span style="COLOR: blue">&gt;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="COLOR: maroon">Button</span><span style="COLOR: blue"> </span><span style="COLOR: red">x:Name</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">stopButton</span><span style="COLOR: black">"</span><span style="COLOR: blue"> </span><span style="COLOR: red">Margin</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">5</span><span style="COLOR: black">"</span><span style="COLOR: blue">&gt;</span><span style="COLOR: black">Stop</span><span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Button</span><span style="COLOR: blue">&gt;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/</span><span style="COLOR: maroon">StackPanel</span><span style="COLOR: blue">&gt;<br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="COLOR: maroon">Grid</span><span style="COLOR: blue"> </span><span style="COLOR: red">x:Name</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">mainGrid</span><span style="COLOR: black">"</span><span style="COLOR: blue"> </span><span style="COLOR: red">Background</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">Black</span><span style="COLOR: black">"</span><span style="COLOR: blue"> /&gt;<br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                                                                &nbsp;&nbsp;&nbsp;&lt;/</span><span style="COLOR: maroon">DockPanel</span><span style="COLOR: blue">&gt;<br>
+                                                                    &nbsp;&nbsp;&nbsp;<br>
+                                                                    &lt;/</span><span style="COLOR: maroon">Window</span><span style="COLOR: blue">&gt;</span>
+                    </div>
+                    <p></p>
+                    <p>
+                        <img alt="Laying out controls with XAML" src="http://odetocode.com/aimages/lifexaml/figure1.gif" align="right">
+                        We can see that in addition to Buttons, WPF also includes a number of controls to manage layout. We use three of these controls in this application: a DockPanel, a StackPanel, and a Grid. Our two Button controls live inside a StackPanel. A StackPanel will arrange children into a horizontal or vertical line. The StackPanel lives inside a DockPanel. A DockPanel arranges children to fill all of it’s available space. In our application we’ve instructed our StackPanel to dock to the bottom of the DockPanel (DockPanel.Dock="Bottom"). The only other control inside the DockPanel is a Grid, so the DockPanel will expand the Grid to fill all the remaining space. Our application’s interface will look like the picture to the right.
+                    </p>
+                    <p>Notice we have not specified a specific size for any of the controls inside of our Window, instead we will rely on WPF to arrange and size all of the controls. Notice we also haven’t defined the contents of our Grid, and Grids require column and row definitions. The problem is, we don’t know what size we want the grid to be, but it should be relatively large, say 40 columns by 40 rows. Instead of putting 40 row and column definitions in XAML, we will put in the definitions with code. </p>
+
+
+
+                    <h3>The Code Of Life</h3>
+                    <p>Although a XAML file can include code from a .NET language, mixing the two gets messy. Fortunately, we can work <i>beside</i> XAML using a partial class specified by the x:Class attribute. The XAML compiler will keep the code it generates in one part of a partial class, and we will keep our code in another part. We can gain access to controls we’ve declared in the XAML when we give them an x:Name attribute. For example, we’ve given the two button controls names, so we can use them from code-behind (also, just so you know, we could have also wired up the events directly in XAML with the following attribute in the Button markup: Click="startButton_Click"). </p>
+                    <p>
+                    </p>
+                    <div style="BORDER-RIGHT: black 1pt solid; BORDER-TOP: black 1pt solid; FONT-SIZE: 8pt; BORDER-LEFT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; FONT-FAMILY: monospace; BACKGROUND-COLOR: #d3d3bd">
+                        <span style="COLOR: blue">void</span><span style="COLOR: black"> Window_Loaded(</span><span style="COLOR: blue">object</span><span style="COLOR: black"> sender, </span><span style="COLOR: teal">RoutedEventArgs</span><span style="COLOR: black"> e)<br>
+                            {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;InitializeGrid();<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;startButton.Click += </span><span style="COLOR: blue">new</span><span style="COLOR: black"> </span><span style="COLOR: teal">RoutedEventHandler</span><span style="COLOR: black">(startButton_Click);<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;stopButton.Click += </span><span style="COLOR: blue">new</span><span style="COLOR: black"> </span><span style="COLOR: teal">RoutedEventHandler</span><span style="COLOR: black">(stopButton_Click);<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;_timer.Elapsed += </span><span style="COLOR: blue">new</span><span style="COLOR: black"> </span><span style="COLOR: teal">ElapsedEventHandler</span><span style="COLOR: black">(_timer_Elapsed);<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;_timer.Interval = TimerInterval;<br>
+                                        }<br>
+                                    </span>
+                    </div>
+                    <p></p>
+                    <p>For the Grid, we can define a private variable (MaxGridSize) to hold the size of the grid – this approach will make it easier to make the number user configurable later. Once we know the size of the grid, we can tell the grid how many rows, and how many columns it should hold using RowDefinition and ColumnDefinition classes. Note these classes contain members to specify heights and widths, but again we will accept the defaults and let WPF figure out everything. </p>
+                    <p>
+                    </p>
+                    <div style="BORDER-RIGHT: black 1pt solid; BORDER-TOP: black 1pt solid; FONT-SIZE: 8pt; BORDER-LEFT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; FONT-FAMILY: monospace; BACKGROUND-COLOR: #d3d3bd">
+                        <span style="COLOR: blue">for</span><span style="COLOR: black"> (</span><span style="COLOR: blue">int</span><span style="COLOR: black"> i = 0; i &lt; MaxGridSize; i++)<br>
+                            {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;mainGrid.ColumnDefinitions.Add(</span><span style="COLOR: blue">new</span><span style="COLOR: black"> </span><span style="COLOR: teal">ColumnDefinition</span><span style="COLOR: black">());<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;mainGrid.RowDefinitions.Add(</span><span style="COLOR: blue">new</span><span style="COLOR: black"> </span><span style="COLOR: teal">RowDefinition</span><span style="COLOR: black">());<br>
+                                    }<br>
+                                </span>
+                    </div>
+                    <p></p>
+                    Now we have a grid and some buttons, but how do we represent a cell of life, and how do we show the which cells are alive? We’ll need to write a little more C#, and a little more XAML. 
+                    <p></p>
+                    <h3>Life’s Events Don’t Pass Me By</h3>
+                    <p>Let’s start with a class to represent a cell of the game. </p>
+                    <p>
+                    </p>
+                    <div style="BORDER-RIGHT: black 1pt solid; BORDER-TOP: black 1pt solid; FONT-SIZE: 8pt; BORDER-LEFT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; FONT-FAMILY: monospace; BACKGROUND-COLOR: #d3d3bd">
+                        <span style="COLOR: blue">public</span><span style="COLOR: black"> </span><span style="COLOR: blue">class</span><span style="COLOR: black"> </span><span style="COLOR: teal">CellOfLife</span><span style="COLOR: black"> : </span><span style="COLOR: teal">INotifyPropertyChanged<br>
+                        </span><span style="COLOR: black">{<br>
+                            &nbsp;&nbsp; </span><span style="COLOR: blue">public</span><span style="COLOR: black"> </span><span style="COLOR: blue">bool</span><span style="COLOR: black"> IsAlive<br>
+                                &nbsp;&nbsp; {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: blue">get</span><span style="COLOR: black">
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+                                <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="COLOR: blue">return</span><span style="COLOR: black"> _isAlive;
+                                    <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: blue">set<br>
+                                        </span><span style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _isAlive = </span><span style="COLOR: blue">value</span><span style="COLOR: black">;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="COLOR: blue">if</span><span style="COLOR: black"> (PropertyChanged != </span><span style="COLOR: blue">null</span><span style="COLOR: black">)<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PropertyChanged(<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: blue">this</span><span style="COLOR: black">,<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: blue">new</span><span style="COLOR: black"> </span><span style="COLOR: teal">PropertyChangedEventArgs</span><span style="COLOR: black">(</span><span style="COLOR: maroon">"IsAlive"</span><span style="COLOR: black">)<br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                                            &nbsp;&nbsp; }<br>
+                                                            <br>
+                                                            &nbsp;&nbsp; </span><span style="COLOR: blue">private</span><span style="COLOR: black"> </span><span style="COLOR: blue">bool</span><span style="COLOR: black"> _isAlive = </span><span style="COLOR: blue">false</span><span style="COLOR: black">;<br>
+                                                                &nbsp;&nbsp;
+                                                            <br>
+                                                            </span><span style="COLOR: blue">&nbsp;&nbsp; #region</span><span style="COLOR: black"> INotifyPropertyChanged Members<br>
+                                                                <br>
+                                                                &nbsp;&nbsp; </span><span style="COLOR: blue">public</span><span style="COLOR: black"> </span><span style="COLOR: blue">event<br>
+                                                                </span><span style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: teal">PropertyChangedEventHandler</span><span style="COLOR: black"> PropertyChanged;<br>
+                                                                </span><span style="COLOR: blue">&nbsp;&nbsp; #endregion<br>
+                                                                </span><span style="COLOR: black">}<br>
+                                                                </span>
+                    </div>
+                    <p></p>
+                    <p>Our class is simple and uses a single boolean field to keep it’s state. The only interesting feature of the class is the implementation of a special interface. The INotifyPropertyChange interface is a part of the System.ComponentModel namespace in .NET 2.0, and is a standard interface for property-change notification events. Windows Forms data binding already makes use of this interface to update controls when an underlying object changes state, and WPF follows suit. When life begins in a cell, our presentation window will know. </p>
+                    <p>We also need to manage a collection of cells. The collection class can encapsulate the simple rules of life, like who lives, who dies, and who comes to life. </p>
+                    <p>
+                    </p>
+                    <div style="BORDER-RIGHT: black 1pt solid; BORDER-TOP: black 1pt solid; FONT-SIZE: 8pt; BORDER-LEFT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; FONT-FAMILY: monospace; BACKGROUND-COLOR: #d3d3bd">
+                        <span style="COLOR: blue">int</span><span style="COLOR: black"> neighbors = CountNeighbors(row, column);<br>
+                            <br>
+                        </span><span style="COLOR: blue">if</span><span style="COLOR: black"> (!_cells[row, column].IsAlive &amp;&amp; neighbors == 3)<br>
+                            {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: green">// a dead cell with three neighbors comes alive<br>
+                            </span><span style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;_nextGeneration[row, column] = </span><span style="COLOR: blue">true</span><span style="COLOR: black">;<br>
+                                }<br>
+                            </span><span style="COLOR: blue">else</span><span style="COLOR: black"> </span><span style="COLOR: blue">if</span><span style="COLOR: black"> (_cells[row, column].IsAlive &amp;&amp;
+                            <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(neighbors == 3 || neighbors == 2))<br>
+                                {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: green">// a live cell with two,three neighbors stay alive<br>
+                                </span><span style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;_nextGeneration[row, column] = </span><span style="COLOR: blue">true</span><span style="COLOR: black">;<br>
+                                    }<br>
+                                </span><span style="COLOR: blue">else<br>
+                                </span><span style="COLOR: black">{<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: green">// a cell dies because of loneliness or overcrowding<br>
+                                    </span><span style="COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;_nextGeneration[row, column] = </span><span style="COLOR: blue">false</span><span style="COLOR: black">;<br>
+                                        }<br>
+                                    </span>
+                    </div>
+                    <p></p>
+                    <p>
+                    </p>
+                    <p>With the game’s data structures and rules in place, all we need to do is render each cell on the screen. Traditional approaches would use GDI+ drawing routines and painstaking calculations to determine what pixels we want to twiddle. With WPF, we have a different, cleaner, strategy. </p>
+                    We already have a Grid panel, all we need to do is provide content for each cell in the Grid. WPF can perform all the calculations to determine the size and placement of the content. Let’s tell WPF to place an ellipse inside each cell. 
+                    <p></p>
+                    <p>
+                    </p>
+                    <div style="BORDER-RIGHT: black 1pt solid; BORDER-TOP: black 1pt solid; FONT-SIZE: 8pt; BORDER-LEFT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; FONT-FAMILY: monospace; BACKGROUND-COLOR: #d3d3bd">
+                        <span style="COLOR: blue">for</span><span style="COLOR: black"> (</span><span style="COLOR: blue">int</span><span style="COLOR: black"> row = 0; row &lt; MaxGridSize; row++)<br>
+                            {<br>
+                            &nbsp;&nbsp; </span><span style="COLOR: blue">for</span><span style="COLOR: black"> (</span><span style="COLOR: blue">int</span><span style="COLOR: black"> column = 0; column &lt; MaxGridSize; column++)<br>
+                                &nbsp;&nbsp; {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: teal">Ellipse</span><span style="COLOR: black"> ellipse = </span><span style="COLOR: blue">new</span><span style="COLOR: black"> </span><span style="COLOR: teal">Ellipse</span><span style="COLOR: black">();<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: teal">Grid</span><span style="COLOR: black">.SetColumn(ellipse, column);<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="COLOR: teal">Grid</span><span style="COLOR: black">.SetRow(ellipse, row);<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ellipse.DataContext = _cells[row, column];<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mainGrid.Children.Add(ellipse);<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ellipse.Style = Resources[</span><span style="COLOR: maroon">"lifeStyle"</span><span style="COLOR: black">] </span><span style="COLOR: blue">as</span><span style="COLOR: black"> </span><span style="COLOR: teal">Style</span><span style="COLOR: black">;<br>
+                                                &nbsp;&nbsp; }<br>
+                                                }<br>
+                                            </span>
+                    </div>
+                    <p></p>
+                    <p>In GDI+ we’d have to use a DrawEllipse method. In WPF we create a new Ellipse object, and tell WPF where to place the ellipse using the static SetColumn and SetRow static methods of the Grid class. SetColumn and SetRow write to an <i>attached property</i> of the Ellipse. Layout elements, like the Grid, StackPanel, and DockPanel, read the attached properties of their children to discover how the children wish to be presented. Attached properties allow extensibility in layout controls, and can be set in XAML with the following syntax. </p>
+                    <p>
+                    </p>
+                    <div style="BORDER-RIGHT: black 1pt solid; BORDER-TOP: black 1pt solid; FONT-SIZE: 8pt; BORDER-LEFT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; FONT-FAMILY: monospace; BACKGROUND-COLOR: #d3d3bd"><span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Ellipse</span><span style="COLOR: blue"> </span><span style="COLOR: red">Grid.Column</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">3</span><span style="COLOR: black">"</span><span style="COLOR: blue"> </span><span style="COLOR: red">Grid.Row</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">2</span><span style="COLOR: black">"</span><span style="COLOR: blue">/&gt;</span> </div>
+                    <p></p>
+                    <p>With Grid position set, we then assign a CellOfLife object from our collection to the DataContext property of the Ellipse object. The DataContext property will allow us to perform one-way data binding against the CellOfLife object. Two-way data binding is also possible, as is one-time binding. </p>
+                    <p>Finally, we add the Ellipse to the Children collection of the grid. Again, we have not specified a size for our ellipse – in fact we haven’t even specified a color. How will the object display itself? The answer is in the last line of the code where we apply a Style object. WPF allows for the styling of a user interface through resources, templates, and styles. Similar to cascading style sheets in web development, styling separates presentation and logic and makes it easy to design and maintain consistent visuals. The Style we are using is defined in a resource section of our XAML file. </p>
+                    <p>
+                    </p>
+                    <div style="BORDER-RIGHT: black 1pt solid; BORDER-TOP: black 1pt solid; FONT-SIZE: 8pt; BORDER-LEFT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; FONT-FAMILY: monospace; BACKGROUND-COLOR: #d3d3bd">
+                        <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Window.Resources</span><span style="COLOR: blue">&gt;<br>
+                            &lt;</span><span style="COLOR: maroon">Style</span><span style="COLOR: blue"> </span><span style="COLOR: red">x:Key</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">lifeStyle</span><span style="COLOR: black">"</span><span style="COLOR: blue"> </span><span style="COLOR: red">TargetType</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">{x:Type Ellipse}</span><span style="COLOR: black">"</span><span style="COLOR: blue">&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&lt;</span><span style="COLOR: maroon">Setter</span><span style="COLOR: blue"> </span><span style="COLOR: red">Property</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">Opacity</span><span style="COLOR: black">"</span><span style="COLOR: blue"> </span><span style="COLOR: red">Value</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">{Binding Path=IsAlive}</span><span style="COLOR: black">"</span><span style="COLOR: blue"> /&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&lt;</span><span style="COLOR: maroon">Setter</span><span style="COLOR: blue"> </span><span style="COLOR: red">Property</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">Fill</span><span style="COLOR: black">"</span><span style="COLOR: blue"> &gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="COLOR: maroon">Setter.Value</span><span style="COLOR: blue">&gt;<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="COLOR: maroon">RadialGradientBrush</span><span style="COLOR: blue">&gt;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="COLOR: maroon">RadialGradientBrush.GradientStops</span><span style="COLOR: blue">&gt;<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="COLOR: maroon">GradientStop</span><span style="COLOR: blue"> </span><span style="COLOR: red">Color</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">White</span><span style="COLOR: black">"</span><span style="COLOR: blue"> </span><span style="COLOR: red">Offset</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">0.0</span><span style="COLOR: black">"</span><span style="COLOR: blue">/&gt;<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="COLOR: maroon">GradientStop</span><span style="COLOR: blue"> </span><span style="COLOR: red">Color</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">Red</span><span style="COLOR: black">"</span><span style="COLOR: blue"> </span><span style="COLOR: red">Offset</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">0.1</span><span style="COLOR: black">"</span><span style="COLOR: blue"> /&gt;<br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="COLOR: maroon">GradientStop</span><span style="COLOR: blue"> </span><span style="COLOR: red">Color</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">DarkRed</span><span style="COLOR: black">"</span><span style="COLOR: blue"> </span><span style="COLOR: red">Offset</span><span style="COLOR: blue">=</span><span style="COLOR: black">"</span><span style="COLOR: blue">0.9</span><span style="COLOR: black">"</span><span style="COLOR: blue">/&gt;<br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/</span><span style="COLOR: maroon">RadialGradientBrush.GradientStops</span><span style="COLOR: blue">&gt;<br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/</span><span style="COLOR: maroon">RadialGradientBrush</span><span style="COLOR: blue">&gt;<br>
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/</span><span style="COLOR: maroon">Setter.Value</span><span style="COLOR: blue">&gt;<br>
+                                                                            &nbsp;&nbsp;&nbsp;&lt;/</span><span style="COLOR: maroon">Setter</span><span style="COLOR: blue">&gt;<br>
+                                                                                &lt;/</span><span style="COLOR: maroon">Style</span><span style="COLOR: blue">&gt;<br>
+                                                                                </span>
+                    </div>
+                    <p></p>
+                    <p>Our style targets a specific control type: the Ellipse. Setter elements will take care of assigning the property values we need. Notice we are using a data binding markup extension to keep the Opacity property of the Ellipse object in sync with the IsAlive property of our CellOfLife object. When the cell is dead, the ellipse will become transparent. When the cell is alive, the Ellipse will become completely opaque. Also notice how easy it is to apply a fancy gradient fill. We now have everything in place to play the Game of Life. </p>
+                    <p>
+                        <img alt="The Game Of Life In WPF" src="http://odetocode.com/aimages/lifexaml/figure2.gif">
+                    </p>
+                    <h3>Goodbye, World</h3>
+                    <p>In this article we took a look at programming with WPF, both using XAML and C# code. We’ve seen data binding and layout elements, yet have barely scratched the surface of what is available in WPF and the WinFX API. <a href="http://odetocode.com/aimages/lifexaml/fxlife.zip">Download the code</a>, and try the Game of Life for yourself. </p>
+                </article>
+
+                <div class="pagination pagination-centered">
+                    <ul>
+                        <li class="disabled"><span>Prev</span></li>
+                        <li class="active"><a href="/articles/lifewithxaml?page=1">1</a></li>
+                        <li><a href="/articles/lifewithxaml?page=1">2</a></li>
+                        <li><a href="/articles/lifewithxaml?page=1">3</a></li>
+                        <li><a href="/articles/lifewithxaml?page=1">4</a></li>
+                        <li><a href="/articles/lifewithxaml?page=1">Next</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="span2">
+                <section>
+                    <ul class="nav nav-list">
+                        <li><a class="" href="http://twitter.com/OdeToCode">Follow</a></li>
+                        <li><a class="" href="http://feeds.feedburner.com/OdeToCode" title="Subscribe to my feed" rel="alternate" type="application/rss+xml">Subscribe</a></li>
+                        <li><a class="" href="/about/contact">Contact</a></li>
+                        <li><a class="" href="/about/search">Search</a></li>
+                        <li><a class="" href="/home/archives">Archives</a></li>
+                    </ul>
+                </section>
+                <hr />
+                <section>
+                    <span class="label">Default</span>
+                    <span class="label label-success">Success Label</span>
+                    <span class="label label-warning">Warning</span>
+                    <span class="label label-important">Important</span>
+                    <span class="label label-info">Info</span>
+                    <span class="label label-inverse">Inverse</span>
+                </section>
+                <hr />
+                <section>
+                    <span class="badge">B</span>
+                    <span class="badge badge-success">Software</span>
+                    <span class="badge badge-warning">Wide Badge</span>
+                    <span class="badge badge-important">I</span>
+                    <span class="badge badge-info"><i class="icon-info-sign icon-white"></i></span>
+                    <span class="badge badge-inverse">O</span>
+                </section>
+                <hr />
+            </div>
+        </div>
+    </div>
+    <footer>
+        (c) Some Web Site
+    </footer>
+</body>
+</html>
