@@ -3,120 +3,152 @@
 <head>
     <meta charset="utf-8">
     <title>Juniper</title>
+    <link href="bootstrap/css/bootstrap-s.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.7.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+
 </head>
 <body>
-    <h2><a class="brand" href="/">Juniper</a></h2>
+    
     <nav>
-        <div>
-            <div>
-                <ul>
+        <div class="navbar">
+
+            <div class="navbar-inner">
+                <a class="brand" href="/">Juniper</a>
+                <ul class="nav">
                     <li><a href="/patients">Patients</a></li>
                     <li><a href="/facilities">Facilities</a></li>
-                    <li><a href="/about/">About</a></li>
-                    <li>
-                        <a href="#">Contact                        
+                    <li class="active"><a href="/about/">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact                        
+                            <span class="caret"></span>
                         </a>
-                        <ul>
+                        <ul class="dropdown-menu">
                             <li><a href="/contact/physical">Physical</a></li>
                             <li><a href="/contact/virtual">Virtual</a></li>
                         </ul>
                     </li>
                 </ul>
-                <form>
-                    <input id="searchQuery" type="search">
+                <form class="navbar-search pull-right">
+                    <input id="searchQuery" class="search-query" type="search">
                     <button>Search</button>
                 </form>
             </div>
         </div>
     </nav>
 
-    <table>
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Room</th>
-                <th>Grade</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Scott</td>
-                <td>1</td>
-                <td>B</td>
-            </tr>
-            <tr>
-                <td>Sara</td>
-                <td>Allen</td>
-                <td>C</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="container">
+        <div class="row">
+            <div class="span10">
+                <table class="table table-hover table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Room</th>
+                            <th>Grade</th>
+                            <th>Instrument</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Scott</td>
+                            <td>1</td>
+                            <td>B</td>
+                            <td>Trumpet</td>
+                        </tr>
+                        <tr>
+                            <td>Sara</td>
+                            <td>2</td>
+                            <td>C</td>
+                            <td>Tuba</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-    <div>Warning! You must accept a license to move further!</div>
+                <div class="alert alert-block alert-warning fade in">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <h4 class="alert-heading">Warning!</h4>
+                    <div>You must accept a license to move further!</div>
+                    <a class="btn btn-danger" href="#" data-dismiss="alert">Whatever!</a>
+                </div>
 
-    <dl>
-        <dt>Bootstrap</dt>
-        <dd>A front end framework for the Web</dd>
-        <dt>CSS</dt>
-        <dd>Cascading Style Sheets control fonts, colors, and spacing in Web documents</dd>
-        <dt>Comic Sans</dt>
-        <dd>A casual script typeface often ridiculed on the Web</dd>
-    </dl>
+                <dl class="dl-horizontal">
+                    <dt>Bootstrap</dt>
+                    <dd>A front end framework for the Web</dd>
+                    <dt>CSS</dt>
+                    <dd>Cascading Style Sheets control fonts, colors, and spacing in Web documents</dd>
+                    <dt>Comic Sans</dt>
+                    <dd>A casual script typeface often ridiculed on the Web</dd>
+                </dl>
 
-    <div>
-        <img src="images/hospital.png" />
-        <div>
-            <button>&lt;</button>
-            <button>||</button>
-            <button>&gt;</button>
+                <div style="text-align: center">
+                    <img src="images/hospital.png" />
+                    <div>
+                        <div class="btn-group">
+                            <button class="btn btn-primary"><span class="icon-backward"></span></button>
+                            <button class="btn btn-primary"><span class="icon-pause"></span></button>
+                            <button class="btn btn-primary"><span class="icon-forward"></span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#themodal" data-toggle="modal" class="btn btn-primary">Get More Info?</a>
+                <div id="themodal" class="modal hide fade">
+                    <div class="modal-header">
+                        <h3>How To Get More Info</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>Just give us a call! +1-240-555-1212</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-primary" data-dismiss="modal">Ok</a>
+                    </div>
+                </div>
+
+                <div id="thepictures" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="item">
+
+                            <img src="images/lobster.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Lobster!</h4>
+                                <p>A lobster dinner at the House of Elliot in Ghent, Belgium.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/IMG_0241.JPG" />
+                            <div class="carousel-caption">
+                                <h4>A Church!</h4>
+                                <p>The church was magnificent, and even had a singing choir.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/IMG_0250.JPG" />
+                            <div class="carousel-caption">
+                                <h4>The Catacombs</h4>
+                                <p>When I think of catacombs, I think of dusty, dirty, skeleton filled basements. Not this one...</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="span2">
+                <div>
+                    <img src="images/ad.jpg" />
+                </div>
+            </div>
         </div>
     </div>
-
-    <div>
-        <div>
-            <h3>How To Get More Info</h3>
-        </div>
-        <div>
-            <p>Just give us a call! +1-240-555-1212</p>
-        </div>
-
-    </div>
-
-    <div>
-        <div>
-            <div>
-                <h4>Lobster!</h4>
-                <img src="images/lobster.jpg" />
-                <p>A lobster dinner at the House of Elliot in Ghent, Belgium.</p>
-            </div>
-            <div>
-                <h4>A Church!</h4>
-                <img src="images/IMG_0241.JPG" />
-                <p>The church was magnificent, and even had a singing choir.</p>
-            </div>
-            <div>
-                <h4>The Catacombs</h4>
-                <img src="images/IMG_0250.JPG" />
-                <p>When I think of catacombs, I think of dusty, dirty, skeleton filled basements. Not this one...</p>
-            </div>
-        </div>
-    </div>
-
+    <script>
+        $(function () {
+            $("#thepictures").carousel({ interval: 2000 });
+        });
+    </script>
 </body>
 </html>
 
-
-<!--
-
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-
-      <div class="modal-footer">
-            <a href="#" class="btn" data-dismiss="modal">Close</a>
-            <a id="yesbutton" href="#" class="btn btn-primary" data-loading-text="Doing it...">Yes! Do it now!</a>
-        </div>
-
--->
