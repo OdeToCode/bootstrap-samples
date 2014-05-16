@@ -3,43 +3,34 @@
 <head>
     <meta charset="utf-8">
     <title>Juniper</title>
-    <link href="bootstrap/css/bootstrap-s.css" rel="stylesheet" />
-    <script src="scripts/jquery-1.7.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
-
+    <link href="../cyborgtheme/css/bootstrap.css" rel="stylesheet" />
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
 </head>
 <body>
-    
-    <nav>
-        <div class="navbar">
 
-            <div class="navbar-inner">
-                <a class="brand" href="/">Juniper</a>
-                <ul class="nav">
-                    <li><a href="/patients">Patients</a></li>
-                    <li><a href="/facilities">Facilities</a></li>
-                    <li class="active"><a href="/about/">About</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact                        
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/contact/physical">Physical</a></li>
-                            <li><a href="/contact/virtual">Virtual</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="navbar-search pull-right">
-                    <input id="searchQuery" class="search-query" type="search">
-                    <button>Search</button>
-                </form>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">The Sample Site</a>
             </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/Articles/List">Articles</a></li>
+                <li><a href="/blogs/all">Blog</a></li>
+                <li><a href="/about/">About</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
         </div>
     </nav>
 
     <div class="container">
         <div class="row">
-            <div class="span10">
+            <div class="col-md-10">
                 <table class="table table-hover table-condensed">
                     <thead>
                         <tr>
@@ -65,9 +56,9 @@
                     </tbody>
                 </table>
 
-                <div class="alert alert-block alert-warning fade in">
+                <div class="alert alert-warning fade in">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <h4 class="alert-heading">Warning!</h4>
+                    <h4>Warning!</h4>
                     <div>You must accept a license to move further!</div>
                     <a class="btn btn-danger" href="#" data-dismiss="alert">Whatever!</a>
                 </div>
@@ -81,34 +72,45 @@
                     <dd>A casual script typeface often ridiculed on the Web</dd>
                 </dl>
 
-                <div style="text-align: center">
+                <div class="text-center">
                     <img src="images/hospital.png" />
                     <div>
                         <div class="btn-group">
-                            <button class="btn btn-primary"><span class="icon-backward"></span></button>
-                            <button class="btn btn-primary"><span class="icon-pause"></span></button>
-                            <button class="btn btn-primary"><span class="icon-forward"></span></button>
+                            <button class="btn btn-default"><span class="glyphicon glyphicon-backward"></span></button>
+                            <button class="btn btn-default"><span class="glyphicon glyphicon-play"></span></button>
+                            <button class="btn btn-default"><span class="glyphicon glyphicon-forward"></span></button>
                         </div>
                     </div>
                 </div>
 
                 <a href="#themodal" data-toggle="modal" class="btn btn-primary">Get More Info?</a>
-                <div id="themodal" class="modal hide fade">
-                    <div class="modal-header">
-                        <h3>How To Get More Info</h3>
-                    </div>
-                    <div class="modal-body">
-                        <p>Just give us a call! +1-240-555-1212</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#" class="btn btn-primary" data-dismiss="modal">Ok</a>
+                <div id="themodal" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-title">A Modal Dialog</div>
+                            <div class="modal-header">
+                                <h3>How To Get More Info</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>Just give us a call! +1-240-555-1212</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="btn btn-primary" data-dismiss="modal">Ok</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div id="thepictures" class="carousel slide">
+                <div id="thepictures" class="carousel" data-ride="carousel">
+                    
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+                    
                     <div class="carousel-inner">
                         <div class="item">
-
                             <img src="images/lobster.jpg" />
                             <div class="carousel-caption">
                                 <h4>Lobster!</h4>
@@ -129,15 +131,16 @@
                                 <p>When I think of catacombs, I think of dusty, dirty, skeleton filled basements. Not this one...</p>
                             </div>
                         </div>
-
                     </div>
+                    <a class="left carousel-control" href="#thepictures" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#thepictures" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
                 </div>
-
-
-
-
             </div>
-            <div class="span2">
+            <div class="col-md-2">
                 <div>
                     <img src="images/ad.jpg" />
                 </div>
