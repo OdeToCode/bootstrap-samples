@@ -7,35 +7,91 @@
 <head>
     <meta charset="utf-8">
     <title>Navigation</title>
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <script src="scripts/jquery-1.7.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>    
 </head>
 <body>
-    <div class="container">
-
-        <div class="row">
-            <div class="span3">
-                <h2>Tabs & Pills</h2>
-
-                <ul class="nav nav-list">
-                    <li class="nav-header">Places to go</li>
-                    <li><a href="#">Home</a></li>
-                    <li class="active"><a href="#">Contact</a></li>
-                    <li><a href="#">Sales</a></li>
+    
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">It's A Demo!</a>                
+            </div>
+            
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">See more sites!
-                            <b class="caret"></b>
-                        </a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a tabindex="-1" href="http://pluralsight.com">Pluralsight</a></li>
-                            <li><a tabindex="-1" href="http://amazon.com">Amazon</a></li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
                         </ul>
                     </li>
                 </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-3">
+                
+                <div class="list-group">
+                    <div class="list-group-item-heading">Places to go</div>
+                    <a href="#" class="list-group-item">Here</a>
+                    <a href="#" class="list-group-item">There</a>
+                    <div class="dropdown list-group-item">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            See more sites!
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://odetocode.com">OdeToCode</a></li>
+                            <li><a href="http://amazon.com">Amazon</a></li>
+                            <li class="divider"></li>
+                            <li><a href="http://somewhere.com">Something else</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                    
 
             </div>
-            <div class="span9">
+            <div class="col-md-9">
                 <h2>Tabbable</h2>
                 <div class="tabbable tabs-below">
                     <ul class="nav nav-tabs">
@@ -46,14 +102,32 @@
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab1">
-                            <p>Twitter Bootstrap is fun!</p>
+                            <div>Twitter Bootstrap is fun!</div>
                         </div>
                         <div class="tab-pane" id="tab2">
-                            <p>Pluralsight is fun!</p>
+                            <div>Tabs are fun!</div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
 
+            </div>
+            <div class="col-md-9">
+                <h2>Pills</h2>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active">
+                        <a href="#" data-toggle="tab">Section 1</a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="tab">Section 2</a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="tab">Section 3</a>
+                    </li>
+                </ul>
 
             </div>
         </div>
