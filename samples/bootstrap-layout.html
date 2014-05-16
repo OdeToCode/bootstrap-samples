@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="head">
     <title>Layout With Bootstrap</title>    
-    <script src="scripts/jquery-1.7.1.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
     <style>
         body {
             padding: 10px;
@@ -12,7 +12,7 @@
             background-color: #cccc99;
         }
 
-        .row-fluid > div {
+        .container-fluid .row > div {
             background-color: #99cccc;
         }
 
@@ -21,33 +21,22 @@
             margin-bottom: 20px;
             font-weight: bold;
             text-align: center;
-        }
+        }        
     </style>
         <script>
             (function () {
 
                 var turnOnBootstrap = function () {
-                    $("#head").append($(' <link id="bootstrap" href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />'));
+                    $("#head").append($('<link id="bootstrap" href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />'));
                 };
 
                 var turnOffBootstrap = function () {
                     $("#bootstrap").remove();
                 };
 
-                var turnOnResponsive = function () {
-                    $("#head").append($(' <link id="bootstrap-responsive" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />'));
-                };
-
-                var turnOffResponsive = function () {
-                    $("#bootstrap-responsive").remove();
-                };
-
                 $(function () {
                     $("#bootstrapcheck").click(function () {
                         $(this).is(':checked') ? turnOnBootstrap() : turnOffBootstrap();
-                    });
-                    $("#bootstrap-responsivecheck").click(function () {
-                        $(this).is(':checked') ? turnOnResponsive() : turnOffResponsive();
                     });
                     $("#gridincontainercheck").click(function () {
                         $("#gridincontainer").toggle();
@@ -76,175 +65,87 @@
         </div>
         <div>
             <label class="checkbox">
-                Add Bootstrap responsive styles
-                <input type="checkbox" id="bootstrap-responsivecheck" />
-            </label>
-        </div>
-        <div>
-            <label class="checkbox">
                 Show grid in container
                 <input type="checkbox" checked id="gridincontainercheck" />
             </label>
         </div>
         <div>
             <label class="checkbox">
-                Show fluid grid in container
+                Show grid in fluid container
                 <input type="checkbox" checked id="fluidgridincontainercheck" />
             </label>
-        </div>
-        <div>
-            <label class="checkbox">
-                Show grid (no container)
-                <input type="checkbox" checked id="gridcheck" />
-            </label>
-        </div>
-        <div>
-            <label class="checkbox">
-                Show fluid grid (no container)
-                <input type="checkbox" checked id="fluidgridcheck" />
-            </label>
-        </div>
+        </div>            
     </form>
     <div>
-    <a href="https://raw.github.com/OdeToCode/bootstrap-samples/gh-pages/samples/bootstrap-layout.html">View Source</a>
+        <a href="https://raw.github.com/OdeToCode/bootstrap-samples/gh-pages/samples/bootstrap-layout.html">View Source</a>
     </div>
     <div id="gridincontainer" class="container">
         <h2>Grid in container</h2>
         <div class="row">
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
         </div>
         <div class="row">
-            <div class="span3">3</div>
-            <div class="span4">4</div>
-            <div class="span5">5</div>
+            <div class="col-md-3">3</div>
+            <div class="col-md-4">4</div>
+            <div class="col-md-5">5</div>
         </div>
         <div class="row">
-            <div class="span5">5</div>
-            <div class="span7">7</div>
+            <div class="col-md-5">5</div>
+            <div class="col-md-7">7</div>
         </div>
         <div class="row">
-            <div class="span3 offset2">3 offset 2</div>
-            <div class="span7">7</div>
+            <div class="col-md-3 col-md-offset-2">3 offset 2</div>
+            <div class="col-md-7">7</div>
         </div>
         <div class="row">
-            <div class="span12">12</div>
+            <div class="col-md-12">12</div>
         </div>
     </div>
 
-    <div class="container" id="fluidgridincontainer">
-        <h2>Fluid grid in container</h2>
-        <div class="row-fluid">
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
+    <div class="container-fluid" id="fluidgridincontainer">
+        <h2>Grid in fluid container</h2>
+        <div class="row">
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
         </div>
-        <div class="row-fluid">
-            <div class="span3">3</div>
-            <div class="span4">4</div>
-            <div class="span5">5</div>
+        <div class="row">
+            <div class="col-md-3">3</div>
+            <div class="col-md-4">4</div>
+            <div class="col-md-5">5</div>
         </div>
-        <div class="row-fluid">
-            <div class="span5">5</div>
-            <div class="span7">7</div>
+        <div class="row">
+            <div class="col-md-5">5</div>
+            <div class="col-md-7">7</div>
         </div>
-        <div class="row-fluid">
-            <div class="span3 offset2">3 offset 2</div>
-            <div class="span7">7</div>
+        <div class="row">
+            <div class="col-md-3 col-md-offset-2">3 offset 2</div>
+            <div class="col-md-7">7</div>
         </div>
-
-        <div class="row-fluid">
-            <div class="span12">12</div>
+        <div class="row">
+            <div class="col-md-12">12</div>
         </div>
     </div>
-
-    <div id="grid">
-        <h2>Grid (no container)</h2>
-        <div class="row">
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-        </div>
-        <div class="row">
-            <div class="span3">3</div>
-            <div class="span4">4</div>
-            <div class="span5">5</div>
-        </div>
-        <div class="row">
-            <div class="span5">5</div>
-            <div class="span7">7</div>
-        </div>
-        <div class="row">
-            <div class="span3 offset2">3 offset 2</div>
-            <div class="span7">7</div>
-        </div>
-
-        <div class="row">
-            <div class="span12">12</div>
-        </div>
-    </div>
-
-    <div id="fluidgrid">
-        <h2>Fluid grid (no container)</h2>
-        <div class="row-fluid">
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-            <div class="span1">1</div>
-        </div>
-        <div class="row-fluid">
-            <div class="span3">3</div>
-            <div class="span4">4</div>
-            <div class="span5">5</div>
-        </div>
-        <div class="row-fluid">
-            <div class="span5">5</div>
-            <div class="span7">7</div>
-        </div>
-        <div class="row-fluid">
-            <div class="span3 offset2">3 offset 2</div>
-            <div class="span7">7</div>
-        </div>
-
-        <div class="row-fluid">
-            <div class="span12">12</div>
-        </div>
-    </div>
+   
 </body>
 </html>
