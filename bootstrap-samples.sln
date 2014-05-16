@@ -8,20 +8,20 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "bootstrap-samples", "http:/
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_8833"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\dev\github\bootstrap-samples\"
+		Debug.AspNetCompiler.PhysicalPath = "..\bootstrap-samples\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_8833\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_8833"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\dev\github\bootstrap-samples\"
+		Release.AspNetCompiler.PhysicalPath = "..\bootstrap-samples\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_8833\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\..\..\..\..\..\dev\github\bootstrap-samples\"
+		SlnRelativePath = "..\bootstrap-samples\"
 	EndProjectSection
 EndProject
 Global
